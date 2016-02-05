@@ -1,0 +1,43 @@
+{
+  "name": "backbone-highway-docs",
+  "version": "0.0.1",
+  "description": "Backbone.Highway documentation pages",
+  "author": "Carl OGREN <rascarlito@gmail.com>",
+  "keywords": [
+    "backbone",
+    "router",
+    "highway",
+    "marionette",
+    "documentation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/d4f/backbone-highway-docs.git"
+  },
+  "scripts": {
+    "start": "grunt serve",
+    "build": "grunt build"
+  },
+  "dependencies": {
+    "backbone": "^1.2.3",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^4.1.8",
+    "connect-history-api-fallback": "^1.1.0",
+    "connect-logger": "0.0.1",
+    "grunt": "^0.4.5",
+    "grunt-browser-sync": "^2.1.3",
+    "grunt-contrib-jshint": "^0.11.3",
+    "grunt-contrib-uglify": "^0.6.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-jscs": "^2.1.0",
+    "grunt-lintspaces": "^0.7.0",
+    "jshint-stylish": "^2.1.0",
+    "load-grunt-config": "^0.17.2",
+    "time-grunt": "^1.2.1"
+  },
+  "engines": {
+    "node": ">= 0.10.x"
+  }
+}
