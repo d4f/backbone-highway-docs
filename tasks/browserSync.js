@@ -8,14 +8,16 @@ module.exports = {
       logConnections: true,
       server: {
         baseDir: [
-          '<%= config.src %>'
+          '<%= config.src %>',
+          '<%= config.src %>/build'
         ]
       },
       middleware: [require('connect-logger')(), historyApiFallback()]
     },
     bsFiles: {
       src: [
-        '<%= config.src %>'
+        '<%= config.src %>',
+        '<%= config.src %>/build'
       ]
     }
   }

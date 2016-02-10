@@ -13,5 +13,11 @@ module.exports = {
       '<%= config.src %>/templates/**/*.dust'
     ],
     tasks: ['dust']
+  },
+  less: {
+    files: [
+      '<%= config.src %>/styles/**/*.less'
+    ],
+    tasks: ['less']
   }
 };

@@ -8,6 +8,7 @@ module.exports = {
       runtime: false,
       basePath: 'src',
       useBaseName: true,
+      whitespace: true,
       wrapper: 'amd',
       wrapperOptions: {
         packageName: null,

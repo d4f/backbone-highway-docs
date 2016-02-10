@@ -18,6 +18,8 @@ define([
         });
 
         view.render();
+
+        Prism.highlightAll();
       }
     });
 

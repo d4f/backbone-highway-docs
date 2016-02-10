@@ -1,6 +1,10 @@
 default:
   - serve
+build:
+  - dust
+  - less
 serve:
+  - build
   - browserSync:dev
   - watch
 lint:
