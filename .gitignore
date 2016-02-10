@@ -23,8 +23,15 @@ coverage
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
 
+# Compiled/Generated JavaScript
+src/build
+
+# Annotated source
+src/docs
+
 # Dependency directory
 node_modules
+src/bower_components
 
 # Optional npm cache directory
 .npm

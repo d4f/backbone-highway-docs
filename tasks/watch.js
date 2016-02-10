@@ -6,6 +6,12 @@ module.exports = {
     files: [
       '<%= config.src %>/**/*.js'
     ],
-    tasks: ['lint:code']
+    tasks: []
+  },
+  dust: {
+    files: [
+      '<%= config.src %>/templates/**/*.dust'
+    ],
+    tasks: ['dust']
   }
 };

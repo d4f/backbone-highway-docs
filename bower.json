@@ -1,0 +1,38 @@
+{
+  "name": "backbone-highway-docs",
+  "version": "0.0.1",
+  "authors": [
+    "Carl OGREN <rascarlito@gmail.com>"
+  ],
+  "description": "Backbone.Highway documentation pages",
+  "keywords": [
+    "backbone",
+    "router",
+    "highway",
+    "marionette",
+    "documentation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/d4f/backbone-highway-docs.git"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "src/bower_components"
+  ],
+  "dependencies": {
+    "backbone": "~1.2.3",
+    "backbone-highway": "~0.6.1",
+    "backbone.marionette": "~2.4.4",
+    "bluebird": "~3.2.2",
+    "dustjs-linkedin": "~2.7.2",
+    "jquery": "~2.2.0",
+    "lodash": "~3.9.0",
+    "loglevel": "~1.4.0",
+    "requirejs": "~2.1.22",
+    "requirejs-plugins": "~1.0.3",
+    "font-awesome": "~4.5.0"
+  }
+}
