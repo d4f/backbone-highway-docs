@@ -1,20 +1,4 @@
-<header>
-  <div class="container">
-    <div>
-      <img src="/images/backbone-router-logo.png" alt="logo" title="">
-      <div>
-        <h1>Backbone.Highway</h1>
-        <h2>Routing Backbone with style \o/</h2>
-      </div>
-    </div>
-
-    <section id="downloads">
-      <a href="https://github.com/d4f/backbone-router/zipball/master" class="btn">Download as .zip</a>
-      <a href="https://github.com/d4f/backbone-router/tarball/master" class="btn">Download as .tar.gz</a>
-      <a href="https://github.com/d4f/backbone-router" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-    </section>
-  </div>
-</header>
+<header data-ui="header"></header>
 
 <div class="container">
   <section id="main_content">
@@ -261,17 +245,13 @@ Backbone.Router.map(function() {~lb}
     </code></pre>
 
     <p>For convenience, the action methods will receive the current <code class="language-javascript">window.location.pathname</code> as the first argument.</p>
-
     <p>The 404 controller will also be executed when a non-existent route is called with the <code class="language-javascript">go</code> method.</p>
-
     <p>The 403 controller will only be executed if the <code class="language-javascript">redirectToLogin</code> option is set to <code class="language-javascript">false</code>.</p>
 
     <h2>
       <a id="events-distribution-triggers" class="anchor" href="#events-distribution-triggers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Events distribution (Triggers)
     </h2>
-
     <p>To distribute the triggers declared in the <code class="language-javascript">before</code> and <code class="language-javascript">after</code> parameters the <code class="language-javascript">Backbone.Router</code> uses the <code class="language-javascript">Marionette</code> global event aggregator: <code class="language-javascript">App.vent</code></p>
-
     <p>This parameter can be overridden using any <code class="language-javascript">Backbone.Events</code> instance.</p>
 
     <pre class="line-numbers"><code class="language-javascript">
@@ -290,9 +270,7 @@ Backbone.Router.start(App);
     <h2>
       <a id="trigger-declaration" class="anchor" href="#trigger-declaration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Trigger declaration
     </h2>
-
     <p>Triggers can be declared in different ways.</p>
-
     <p>They can be a simple <code class="language-javascript">String</code> for the simple ones:</p>
 
     <pre class="line-numbers"><code class="language-javascript">
@@ -326,7 +304,6 @@ Backbone.Router.start(App);
     <h2>
       <a id="secured-routes" class="anchor" href="#secured-routes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Secured routes
     </h2>
-
     <p>Each route can receive an <code class="language-javascript">authed</code> boolean parameter to declare if the route should be interpreted when the user is logged in or not.</p>
 
     <pre class="line-numbers"><code class="language-javascript">
@@ -344,9 +321,7 @@ Backbone.Router.map(function() {~lb}
 
     <p>To make a route be interpreted in both cases (i.e. when the user is logged in or logged out),
     simply leave out the <code class="language-javascript">authed</code> parameter in the route declaration.</p>
-
     <p><strong>Important</strong></p>
-
     <p>Only the server has the authority to tell if a connected client is a logged in user or not.
     So for this system to actually work, the server has to print out a small piece of JavaScript to tell the router the current client's state:</p>
 
@@ -370,9 +345,7 @@ $(funtion() {~lb}
     <h2>
       <a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example
     </h2>
-
     <p>An implementation example <code class="language-javascript">index.php</code> file is available in the repository. To run it create an apache vhost or use any web server you like.</p>
-
     <p>So that client-side routing can work, every request sent to the server must be answered with the same code,
     therefore an <code class="language-javascript">.htaccess</code> file activating mod_rewrite and redirecting all requests to the <code class="language-javascript">index.php</code> file is also available in the repository.</p>
   </section>

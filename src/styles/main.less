@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: #151515 url("../images/bkg.png") 0 0;
+  background: #151515 url("/images/bkg.png") 0 0;
   color: #eaeaea;
   font: 16px;
   line-height: 1.5;
@@ -12,7 +12,6 @@ body {
 
 .container {
   width: 90%;
-  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -21,12 +20,8 @@ section {
   margin: 0 0 20px 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 20px;
-}
-
 li {
-  line-height: 1.4 ;
+  line-height: 1.4;
 }
 
 /* Header, <header>
@@ -41,34 +36,34 @@ header {
   border-bottom: 1px dashed #80bd01;
   padding: 20px 0;
   margin: 0 0 40px 0;
-}
 
-header h1 {
-  font-size: 30px;
-  line-height: 1.5;
-  margin: 0;
-  font-weight: bold;
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  color: #80bd01;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
-               0 0 5px rgba(181, 232, 83, 0.1),
-               0 0 10px rgba(181, 232, 83, 0.1);
-  letter-spacing: -1px;
-  -webkit-font-smoothing: antialiased;
-  position: relative;
-}
+  h1 {
+    font-size: 30px;
+    line-height: 1.5;
+    margin: 0;
+    font-weight: bold;
+    font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+    color: #80bd01;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
+                 0 0 5px rgba(181, 232, 83, 0.1),
+                 0 0 10px rgba(181, 232, 83, 0.1);
+    letter-spacing: -1px;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+  }
 
-header img {
-  width: 75px;
-  height: 75px;
-  float: left;
-  margin-right: 15px;
-}
+  h2 {
+    font-size: 18px;
+    font-weight: 300;
+    color: #666;
+  }
 
-header h2 {
-  font-size: 18px;
-  font-weight: 300;
-  color: #666;
+  img {
+    width: 75px;
+    height: 75px;
+    float: left;
+    margin-right: 15px;
+  }
 }
 
 #downloads .btn {
@@ -83,12 +78,42 @@ header h2 {
 #main_content {
   width: 100%;
   -webkit-font-smoothing: antialiased;
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 14px;
+  }
+
+  h5 {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 0 0 5px 0;
+  }
+
+  h6 {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #999;
+    margin: 0 0 5px 0;
+  }
 }
 section img {
   max-width: 100%
 }
 
 h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 20px;
   font-weight: normal;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   color: #80bd01;
@@ -96,35 +121,6 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
                0 0 5px rgba(181, 232, 83, 0.1),
                0 0 10px rgba(181, 232, 83, 0.1);
-}
-
-#main_content h1 {
-  font-size: 30px;
-}
-
-#main_content h2 {
-  font-size: 24px;
-}
-
-#main_content h3 {
-  font-size: 18px;
-}
-
-#main_content h4 {
-  font-size: 14px;
-}
-
-#main_content h5 {
-  font-size: 12px;
-  text-transform: uppercase;
-  margin: 0 0 5px 0;
-}
-
-#main_content h6 {
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #999;
-  margin: 0 0 5px 0;
 }
 
 dt {

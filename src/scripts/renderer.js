@@ -1,7 +1,7 @@
 define([
   'marionette',
   'dust.core',
-  'views'
+  'compiled-views'
 ], function (Marionette, dust) {
   'use strict';
 

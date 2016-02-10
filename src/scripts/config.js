@@ -15,7 +15,7 @@ require.config({
     loglevel: '../bower_components/loglevel/dist/loglevel',
     bluebird: '../bower_components/bluebird/js/browser/bluebird',
     'dust.core': '../bower_components/dustjs-linkedin/dist/dust-core',
-    views: '../build/scripts/views'
+    'compiled-views': '../build/scripts/views'
   },
 
   shim: {
@@ -30,5 +30,5 @@ require.config({
     }
   },
 
-  deps: ['jquery', 'backbone', 'marionette', 'highway']
+  deps: ['jquery', 'backbone', 'marionette', 'highway', 'renderer']
 });

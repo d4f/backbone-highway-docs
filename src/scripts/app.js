@@ -1,28 +1,18 @@
 define([
   'marionette',
   'highway',
-  'renderer'
-], function (Marionette, highway) {
+  'controllers/core'
+], function (Marionette, highway, CoreController) {
   'use strict';
 
-  var MainView = Marionette.ItemView.extend({
-    template: 'main'
+  var core = new CoreController();
+
+  highway.route('home', {
+    path: '/',
+    action: core.home
   });
 
   $(function () {
-    highway.route('home', {
-      path: '/',
-      action: function () {
-        var view = new MainView({
-          el: '.main-container'
-        });
-
-        view.render();
-
-        Prism.highlightAll();
-      }
-    });
-
     highway.start({
       debug: true
     });
