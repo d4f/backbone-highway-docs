@@ -12,8 +12,7 @@ define([
     dust.render(template, data, function (err, out) {
       if (err) {
         console.error(err);
-      }
-      else {
+      } else {
         html = out;
       }
     });
