@@ -2,14 +2,22 @@ define([
   'marionette',
   'highway',
   'controllers/core'
-], function (Marionette, highway, CoreController) {
+], function (Marionette, highway, coreController) {
   'use strict';
-
-  var core = new CoreController();
 
   highway.route('home', {
     path: '/',
-    action: core.home
+    action: coreController.home
+  });
+
+  highway.route('docs', {
+    path: '/docs',
+    action: coreController.docs
+  });
+
+  highway.route('api', {
+    path: '/api',
+    action: coreController.api
   });
 
   $(function () {

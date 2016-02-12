@@ -1,0 +1,17 @@
+<ul>
+  <li>
+    <a href="/docs" data-route="docs">
+      <span>Documentation</span>
+    </a>
+  </li>
+  <li>
+    <a href="/api" data-route="api">
+      <span>API</span>
+    </a>
+  </li>
+  <li>
+    <a href="/docs/backbone.highway.html">
+      <span>Annotated Source</span>
+    </a>
+  </li>
+</ul>

@@ -6,8 +6,10 @@
   </div>
 </div>
 
-<section id="downloads">
+<div data-ui="nav" class="nav-container"></div>
+
+<!-- <section id="downloads">
   <a href="https://github.com/d4f/backbone-router/zipball/master" class="btn">Download as .zip</a>
   <a href="https://github.com/d4f/backbone-router/tarball/master" class="btn">Download as .tar.gz</a>
   <a href="https://github.com/d4f/backbone-router" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-</section>
+</section> -->

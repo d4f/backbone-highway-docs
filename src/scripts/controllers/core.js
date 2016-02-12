@@ -1,23 +1,46 @@
 define([
   'marionette',
   'views/layout',
-  'views/header'
+  'views/header',
+  'views/docs',
+  'views/api'
 ], function (
   Marionette,
   LayoutView,
-  HeaderView
+  HeaderView,
+  DocsView,
+  ApiView
 ) {
   'use strict';
 
-  return Marionette.Controller.extend({
-    home: function () {
-      var layout = new LayoutView({
-        el: '[data-ui=main]'
-      });
-      layout.render();
+  function displayLayout () {
+    var layout = new LayoutView({
+      el: '[data-ui=main]'
+    });
+    layout.render();
 
-      var headerView = new HeaderView();
-      layout.header.show(headerView);
+    var headerView = new HeaderView();
+    layout.header.show(headerView);
+
+    return layout;
+  }
+
+  var CoreController = Marionette.Controller.extend({
+    home: function () {
+      var layout = displayLayout();
+      layout.content.show(new DocsView());
+    },
+
+    docs: function () {
+      var layout = displayLayout();
+      layout.content.show(new DocsView());
+    },
+
+    api: function () {
+      var layout = displayLayout();
+      layout.content.show(new ApiView());
     }
   });
+
+  return new CoreController();
 });

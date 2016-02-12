@@ -7,11 +7,8 @@ define([
     template: 'layout',
 
     regions: {
-      header: '[data-ui=header]'
-    },
-
-    onRender: function () {
-      Prism.highlightAll();
+      header: '[data-ui=header]',
+      content: '[data-ui=content]'
     }
   });
 });

@@ -1,10 +1,19 @@
 define([
-  'marionette'
-], function (Marionette) {
+  'marionette',
+  './nav'
+], function (Marionette, NavView) {
   'use strict';
 
-  return Marionette.ItemView.extend({
+  return Marionette.LayoutView.extend({
     template: 'header',
-    className: 'container'
+    className: 'container',
+
+    regions: {
+      nav: '[data-ui=nav]'
+    },
+
+    onRender: function () {
+      this.nav.show(new NavView());
+    }
   });
 });

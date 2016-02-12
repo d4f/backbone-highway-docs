@@ -1,0 +1,350 @@
+<section id="main_content">
+  <p><code class="language-javascript">Backbone.Highway</code> wraps the <code class="language-javascript">Backbone.Router</code> to simplify its use and bring new functionalities</p>
+  <p>Its structure and API is inspired by routers in the Node.js frameworks: Meteor and ExpressJS.</p>
+  <p>Added functionalities compared to the <code class="language-javascript">Backbone.Router</code> are:</p>
+
+  <ul>
+    <li>Multiple controllers for the same path</li>
+    <li>Before and After triggers distributed using an event aggregator</li>
+    <li>Simple trigger cache managing</li>
+    <li>Aliasing between routes</li>
+    <li>"Secured" routes</li>
+    <li>Close action (similar to onbeforeunload)</li>
+  </ul>
+
+  <h2>
+    <a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation
+  </h2>
+  <p>You can install the library via bower:</p>
+  <pre><code class="language-javascript">bower install backbone-highway</code></pre>
+  <p>or via npm:</p>
+  <pre><code class="language-javascript">npm install backbone-highway</code></pre>
+
+  <h2>
+    <a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dependencies
+  </h2>
+
+  <ul>
+    <li>Backbone >= 1.1.4</li>
+    <li>Underscore &gt;= 1.4.4 </li>
+  </ul>
+
+  <h2>
+    <a id="general-use" class="anchor" href="#general-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>General use
+  </h2>
+  <p>Declaring routes goes through executing a simple method: <code>Backbone.Highway.map();</code></p>
+  <p>This method takes a function as its only parameter which will be executed in the router's context to access the internal API easily. A route consists of a unique name and an object to describe the route's action.</p>
+  <p>Let's just jump right in with an example:</p>
+
+  <pre class="line-numbers"><code class="language-javascript">
+// Create a marionette app instance
+var App = new Backbone.Marionette.Application();
+
+// Start route declarations
+Backbone.Router.map(function() {~lb}
+// Declare a route named 'home'
+this.route("home", {~lb}
+  // The url to which the route will respond
+  "path": "/",
+  // Method to be executed when the given path is intercepted
+  "action": function() {~lb}
+    // Do something fantastic \o/
+  {~rb}
+{~rb});
+
+// Declare other routes...
+{~rb});
+
+// Wait for document ready event
+$(function() {~lb}
+// Start the marionette app
+App.start();
+
+// Start the router passing the marionette app instance
+Backbone.Router.start(App);
+{~rb});
+  </code></pre>
+
+  <h2>
+    <a id="start-routing" class="anchor" href="#start-routing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Start routing
+  </h2>
+  <p>The router has to be started via the <code class="language-javascript">start</code> method.</p>
+  <p>Parameters:</p>
+  <ul>
+    <li>App (Mixed) - Can be an instance of <code class="language-javascript">Backbone.Marionette.Application</code> or a copy of <code class="language-javascript">Backbone.Events</code>. Will be used to execute triggers declared in routes.</li>
+    <li>Options (Object) - Override default router configuration</li>
+  </ul>
+  <p>If given a Marionette app instance the router will use the <code class="language-javascript">vent</code> global event aggregator to distribute route triggers.</p>
+  <p>Building on the previous script, here is an example:</p>
+
+  <pre class="line-numbers"><code class="language-javascript">
+// Create app
+var App = new Backbone.Marionette.Application();
+
+// Define some routes ...
+
+// Start the marionette app
+App.start();
+
+// Start the router passing the marionette app
+// instance and an options object
+Backbone.Router.start(App, {~lb}
+// Root url for all routes, passed to Backbone.history
+"root": "/admin",
+
+// Activate html5 pushState or not, true by default
+"pushState": false,
+
+// Whether the user is currently logged in or not
+"authed": false,
+
+// If not logged in, redirect the user to a
+// route named "login" (if it exists)
+"redirectToLogin": false,
+
+// Print out routing debug information to the console
+"debug": true
+{~rb});
+  </code></pre>
+
+  <p>Or passing a <code class="language-javascript">Backbone.Events</code> copy:</p>
+
+  <pre class="line-numbers"><code class="language-javascript">
+// Copy Backbone.Events
+var dispatcher = _.extend({~lb}{~rb}, Backbone.Events);
+
+// Start router
+Backbone.Router.start(dispatcher);
+  </code></pre>
+
+  <p>The dispatcher can also be overridden before the router is started in this way:</p>
+
+  <pre><code class="language-javascript">Backbone.Router.dispatcher = _.extend({~lb}{~rb}, Backbone.Events);</code></pre>
+
+  <h2>
+    <a id="router-go" class="anchor" href="#router-go" aria-hidden="true"><span class="octicon octicon-link"></span></a>Router go!
+  </h2>
+  <p>To redirect the user to a certain route when, for example, he clicks a link simply use the <code class="language-javascript">go</code> method.</p>
+
+  <pre><code class="language-javascript">Backbone.Router.go("home");</code></pre>
+
+  <p><strong>Parameters</strong></p>
+  <ul>
+    <li>name (Mixed): The route name to execute or an object describing the route.</li>
+    <li>args (Mixed): Array of arguments, can also be a function's <code class="language-javascript">arguments</code> object.</li>
+    <li>options (Object): Passed to the Backbone.Router navigate method. Defaults to <code class="language-javascript">{~lb} "trigger": true, "replace": false {~rb}</code>
+    </li>
+  </ul>
+  <p>Let's define a route that takes a parameter:</p>
+
+  <pre class="line-numbers"><code class="language-javascript">
+Backbone.Router.map(function() {~lb}
+// Declare a user profile page
+this.route("user_profile", {~lb}
+  "path": "/user/:id",
+  "action": function(userId) {~lb}
+    // Render user profile page
+  {~rb}
+{~rb});
+{~rb});
+  </code></pre>
+
+  <p>Considering the current page contains a link like this:</p>
+
+  <pre><code class="language-markup">&lt;a href="/user/42" class="profile" data-id="42"&gt;Your profile!&lt;/a&gt;</code></pre>
+
+  <p>We could write a script (using jquery) to redirect the user like so:</p>
+
+  <pre class="line-numbers"><code class="language-javascript">
+// Intercept the user click
+$("a.profile").click(function(e) {~lb}
+e.preventDefault();
+
+var userId = $(this).attr("data-id");
+
+// Redirecting to route named "user_profile" passing an id
+Backbone.Router.go("user_profile", [userId]);
+{~rb});
+  </code></pre>
+
+  <p>As the first parameter to the <code class="language-javascript">go</code> method can be an object, we could also write the previous script in this manner:</p>
+
+  <pre class="line-numbers"><code class="language-javascript">
+// Intercept the user click
+$("a.profile").click(function(e) {~lb}
+e.preventDefault();
+
+// Redirecting to route using the path defined in the href attribute
+Backbone.Router.go({~lb} "path": this.href {~rb});
+{~rb});
+  </code></pre>
+
+  <h2>
+    <a id="route-declaration-parameters" class="anchor" href="#route-declaration-parameters" aria-hidden="true"><span class="octicon octicon-link"></span></a>Route declaration parameters
+  </h2>
+
+  <p>The <code class="language-javascript">path</code> and <code class="language-javascript">action</code> parameters are the base of a route. But a few more parameters exist to extend the control of the route.</p>
+
+  <pre class="line-numbers"><code class="language-javascript">
+// Definition object for a route named 'user_edit'
+{~lb}
+  // Path with an 'id' parameter
+  "path": "/user/:id/edit",
+
+  // Route will only be executed if the user is logged in
+  "authed": true,
+
+  // Execute triggers before the 'action' controller
+  "before": [
+    {~lb} "name": "core:display", "cache": true {~rb},
+    "users:display"
+  ],
+
+  // Main controller for the route
+  "action": function(userId) {~lb}
+    // Render a user edit form
+  {~rb},
+
+  // Execute triggers after the 'action' controller
+  "after": [
+    "core:post_triggers"
+  ],
+
+  // Executed when user is routed away from this route
+  "close": function() {~lb}
+    // Return false to cancel the routing
+    return confirm("Are you sure you want to leave this page?");
+  {~rb}
+{~rb}
+  </code></pre>
+
+  <h3>
+    <a id="catching-client-side-404-and-403" class="anchor" href="#catching-client-side-404-and-403" aria-hidden="true"><span class="octicon octicon-link"></span></a>Catching client-side 404 and 403
+  </h3>
+
+  <p>A route named 404 can be declared to catch all non-existent routes.
+  In the same way a route can be named 403 to catch accessing restricted routes.</p>
+
+  <pre class="line-numbers"><code class="language-javascript">
+Backbone.Router.map(function() {~lb}
+  // 404 controller
+  this.route("404", {~lb}
+    "action": function(path) {~lb}
+      // Couldn't find what you're looking for =/
+    {~rb}
+  {~rb});
+
+  // 403 controller
+  this.route("403", {~lb}
+    "action": function(path) {~lb}
+      // Sorry you can't access this content =(
+    {~rb}
+  {~rb});
+{~rb});
+  </code></pre>
+
+  <p>For convenience, the action methods will receive the current <code class="language-javascript">window.location.pathname</code> as the first argument.</p>
+  <p>The 404 controller will also be executed when a non-existent route is called with the <code class="language-javascript">go</code> method.</p>
+  <p>The 403 controller will only be executed if the <code class="language-javascript">redirectToLogin</code> option is set to <code class="language-javascript">false</code>.</p>
+
+  <h2>
+    <a id="events-distribution-triggers" class="anchor" href="#events-distribution-triggers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Events distribution (Triggers)
+  </h2>
+  <p>To distribute the triggers declared in the <code class="language-javascript">before</code> and <code class="language-javascript">after</code> parameters the <code class="language-javascript">Backbone.Router</code> uses the <code class="language-javascript">Marionette</code> global event aggregator: <code class="language-javascript">App.vent</code></p>
+  <p>This parameter can be overridden using any <code class="language-javascript">Backbone.Events</code> instance.</p>
+
+  <pre class="line-numbers"><code class="language-javascript">
+var App = new Backbone.Marionette.Application();
+
+// Create a custom event aggregator
+var myDispatcher = _.extend({~lb}{~rb}, Backbone.Events);
+
+// Pass the custom object to the Router
+Backbone.Router.dispatcher = myDispatcher;
+
+App.start();
+Backbone.Router.start(App);
+  </code></pre>
+
+  <h2>
+    <a id="trigger-declaration" class="anchor" href="#trigger-declaration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Trigger declaration
+  </h2>
+  <p>Triggers can be declared in different ways.</p>
+  <p>They can be a simple <code class="language-javascript">String</code> for the simple ones:</p>
+
+  <pre class="line-numbers"><code class="language-javascript">
+{~lb}
+// ...
+"before": [
+  "core",
+  "module",
+  "submodule"
+],
+// ...
+{~rb}
+  </code></pre>
+
+  <p>They can also be declared as an object with different parameters:</p>
+
+  <pre class="line-numbers"><code class="language-javascript">
+{~lb}
+// ...
+"before": [
+  {~lb} "name": "core", "cache": true {~rb},
+  {~lb} "name": "module", args: [foo, bar] {~rb},
+  "submodule"
+],
+// ...
+{~rb}
+  </code></pre>
+
+  <p><strong>Most importantly:</strong> Each declared route becomes a trigger itself so that routes can build on each other.</p>
+
+  <h2>
+    <a id="secured-routes" class="anchor" href="#secured-routes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Secured routes
+  </h2>
+  <p>Each route can receive an <code class="language-javascript">authed</code> boolean parameter to declare if the route should be interpreted when the user is logged in or not.</p>
+
+  <pre class="line-numbers"><code class="language-javascript">
+Backbone.Router.map(function() {~lb}
+  // Declare secure route
+  this.route("secure_route", {~lb}
+    "path": "/admin/users",
+    "authed": true,
+    "action": function() {~lb}
+      // Display list of users
+    {~rb}
+  {~rb});
+{~rb});
+  </code></pre>
+
+  <p>To make a route be interpreted in both cases (i.e. when the user is logged in or logged out),
+  simply leave out the <code class="language-javascript">authed</code> parameter in the route declaration.</p>
+  <p><strong>Important</strong></p>
+  <p>Only the server has the authority to tell if a connected client is a logged in user or not.
+  So for this system to actually work, the server has to print out a small piece of JavaScript to tell the router the current client's state:</p>
+
+  <pre class="line-numbers"><code class="language-markup">
+&lt;script type="text/javascript" src="backbone.router.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+window.logged_in = &lt;?php if ($_SESSION['logged_in']): ?&gt;true&lt;?php else: ?&gt;false&lt;?php endif; ?&gt;;
+
+$(funtion() {~lb}
+  // Starting the marionette app
+  App.start();
+
+  // Starting the router telling it if the user is logged in or not
+  Backbone.Router.start(App, {~lb}
+    "authed": window.logged_in
+  {~rb});
+{~rb});
+&lt;/script&gt;
+  </code></pre>
+
+  <h2>
+    <a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example
+  </h2>
+  <p>An implementation example <code class="language-javascript">index.php</code> file is available in the repository. To run it create an apache vhost or use any web server you like.</p>
+  <p>So that client-side routing can work, every request sent to the server must be answered with the same code,
+  therefore an <code class="language-javascript">.htaccess</code> file activating mod_rewrite and redirecting all requests to the <code class="language-javascript">index.php</code> file is also available in the repository.</p>
+</section>

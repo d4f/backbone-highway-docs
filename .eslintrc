@@ -22,6 +22,7 @@
     "$": true,
     "jQuery": true,
     "module": true,
+    "_": true
   },
 
   "rules": {
