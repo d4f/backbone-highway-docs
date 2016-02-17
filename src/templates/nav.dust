@@ -1,7 +1,7 @@
 <ul>
   <li>
-    <a href="/docs" data-route="docs">
-      <span>Documentation</span>
+    <a href="/getting-started" data-route="getting-started">
+      <span>Getting started</span>
     </a>
   </li>
   <li>

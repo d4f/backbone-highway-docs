@@ -1,18 +1,4 @@
 <section id="main_content">
-  <p><code class="language-javascript">Backbone.Highway</code> wraps the <code class="language-javascript">Backbone.Router</code> to simplify its use and bring new functionalities</p>
-  <p>Its structure and API is inspired by routers in the Node.js frameworks: Meteor and ExpressJS.</p>
-  <p>Added functionalities compared to the <code class="language-javascript">Backbone.Router</code> are:</p>
-
-  <ul>
-    <li>Named routes</li>
-    <li>Multiple controllers for a same route</li>
-    <li>Aliasing between routes</li>
-    <li>Before and After triggers distributed using an event aggregator</li>
-    <li>Simple trigger cache managing</li>
-    <li>"Secured" routes</li>
-    <li>Close action (similar to onbeforeunload)</li>
-  </ul>
-
   <h2>
     <a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation
   </h2>
@@ -158,7 +144,6 @@ Backbone.Highway.route('home', {~lb}
   <p>They can also be declared as an object with different parameters:</p>
 
   <pre class="line-numbers"><code class="language-javascript">
-{~lb}
 Backbone.Highway.route('home', {~lb}
   path: '/',
   before: [
@@ -227,7 +212,7 @@ window.logged_in = &lt;?php if ($_SESSION['logged_in']): ?&gt;true&lt;?php else:
 $(funtion() {~lb}
   // Starting the router telling it if the user is logged in or not
   Backbone.Highway.start({~lb}
-    "authed": window.logged_in
+    authed: window.logged_in
   {~rb});
 {~rb});
 &lt;/script&gt;
@@ -236,7 +221,7 @@ $(funtion() {~lb}
   <h2>
   <a id="demo--example" class="anchor" href="#demo--example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demo / Example</h2>
 
-  <p>A demo is available in the <code>demo</code> folder.</p>
+  <p>A demo is available in the <code class="language-javascript">demo</code> folder.</p>
 
   <p>Use npm and bower to install dependencies and grunt to launch the demo server.</p>
 
@@ -244,7 +229,7 @@ $(funtion() {~lb}
 ~/backbone-highway$ npm install &amp;&amp; bower install
 ~/backbone-highway$ grunt serve</code></pre>
 
-  <h2>
+  <!-- <h2>
   <a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
 
   <p>The MIT License (MIT)</p>
@@ -267,5 +252,5 @@ $(funtion() {~lb}
   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-  SOFTWARE.</p>
+  SOFTWARE.</p> -->
 </section>

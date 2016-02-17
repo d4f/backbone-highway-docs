@@ -10,14 +10,18 @@ define([
     action: coreController.home
   });
 
-  highway.route('docs', {
-    path: '/docs',
+  highway.route('getting-started', {
+    path: '/getting-started',
     action: coreController.docs
   });
 
   highway.route('api', {
     path: '/api',
     action: coreController.api
+  });
+
+  highway.route('404', {
+    action: coreController.notFound
   });
 
   $(function () {

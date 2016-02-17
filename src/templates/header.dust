@@ -1,9 +1,11 @@
-<div>
-  <img src="/images/backbone-router-logo.png" alt="logo" title="">
-  <div>
-    <h1>Backbone.Highway</h1>
-    <h2>Routing Backbone with style \o/</h2>
-  </div>
+<div class="title-container">
+  <a href="/" data-route="home" class="home-link">
+    <img src="/images/backbone-router-logo.png" alt="logo" title="">
+    <div class="title-inner">
+      <h1>Backbone.Highway</h1>
+      <h2>Routing Backbone with style \o/</h2>
+    </div>
+  </a>
 </div>
 
 <div data-ui="nav" class="nav-container"></div>

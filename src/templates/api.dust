@@ -1,1 +1,134 @@
-<h1>API!</h1>
+<h2>API documentation</h2>
+
+<nav class="subnav">
+  <div class="section">
+    <div class="title">
+      Public API
+    </div>
+    <ul>
+      <li>
+        <a href="#">
+          <span>clearCache</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>declare</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>define</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>go</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>map</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>off</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>on</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>route</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>start</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>trigger</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="title">
+      Private API
+    </div>
+    <ul>
+      <li>
+        <a href="#">
+          <span>_applyStoredRoute</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>_cacheTrigger</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>_checkPath</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>_exists</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>_findCachedTrigger</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>_hasDispatcher</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>_httpError</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>_name</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>_path</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>_processControllers</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>_processTriggers</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>_processTrigger</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span>_startHistory</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

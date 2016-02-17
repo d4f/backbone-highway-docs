@@ -1,13 +1,11 @@
 define([
   'marionette',
-  'highway',
   'behaviors/routing'
-], function (Marionette, highway, RoutingBehavior) {
+], function (Marionette, RoutingBehavior) {
   'use strict';
 
   return Marionette.ItemView.extend({
-    template: 'nav',
-    tagName: 'nav',
+    template: 'home',
 
     behaviors: {
       Routing: {

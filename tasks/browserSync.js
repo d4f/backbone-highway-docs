@@ -9,6 +9,7 @@ module.exports = {
       server: {
         baseDir: [
           '<%= config.src %>',
+          '!<%= config.src %>/styles/**/*.less',
           '<%= config.src %>/build'
         ]
       },
@@ -17,6 +18,7 @@ module.exports = {
     bsFiles: {
       src: [
         '<%= config.src %>',
+        '!<%= config.src %>/styles/**/*.less',
         '<%= config.src %>/build'
       ]
     }

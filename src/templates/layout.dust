@@ -1,3 +1,2 @@
-<header data-ui="header"></header>
-
+<header data-ui="header" class="clearfix"></header>
 <div data-ui="content" class="container"></div>

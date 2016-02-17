@@ -1,7 +1,9 @@
 define([
   'marionette',
+  'highway',
+  'behaviors/routing',
   './nav'
-], function (Marionette, NavView) {
+], function (Marionette, highway, RoutingBehavior, NavView) {
   'use strict';
 
   return Marionette.LayoutView.extend({
@@ -10,6 +12,12 @@ define([
 
     regions: {
       nav: '[data-ui=nav]'
+    },
+
+    behaviors: {
+      Routing: {
+        behaviorClass: RoutingBehavior
+      }
     },
 
     onRender: function () {

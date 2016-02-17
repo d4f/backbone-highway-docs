@@ -1,14 +1,18 @@
 define([
   'marionette',
+  'highway',
   'views/layout',
   'views/header',
-  'views/docs',
+  'views/home',
+  'views/getting-started',
   'views/api'
 ], function (
   Marionette,
+  highway,
   LayoutView,
   HeaderView,
-  DocsView,
+  HomeView,
+  GettingStartedView,
   ApiView
 ) {
   'use strict';
@@ -28,17 +32,21 @@ define([
   var CoreController = Marionette.Controller.extend({
     home: function () {
       var layout = displayLayout();
-      layout.content.show(new DocsView());
+      layout.content.show(new HomeView());
     },
 
     docs: function () {
       var layout = displayLayout();
-      layout.content.show(new DocsView());
+      layout.content.show(new GettingStartedView());
     },
 
     api: function () {
       var layout = displayLayout();
       layout.content.show(new ApiView());
+    },
+
+    notFound: function () {
+      highway.go('home', [], {replace: true});
     }
   });
 
