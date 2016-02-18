@@ -3,6 +3,7 @@ define([
   'highway',
   'views/layout',
   'views/header',
+  'views/footer',
   'views/home',
   'views/getting-started',
   'views/api'
@@ -11,6 +12,7 @@ define([
   highway,
   LayoutView,
   HeaderView,
+  FooterView,
   HomeView,
   GettingStartedView,
   ApiView
@@ -25,6 +27,9 @@ define([
 
     var headerView = new HeaderView();
     layout.header.show(headerView);
+
+    var footerView = new FooterView();
+    layout.footer.show(footerView);
 
     return layout;
   }

@@ -1,6 +1,5 @@
 <section id="main_content">
-  <p><code class="language-javascript">Backbone.Highway</code> wraps the <code class="language-javascript">Backbone.Router</code> to simplify its use and bring new functionalities</p>
-  <p>Its structure and API is inspired by routers in the Node.js frameworks: Meteor and ExpressJS.</p>
+  <p><code class="language-javascript">Backbone.Highway</code> wraps the <code class="language-javascript">Backbone.Router</code> to simplify its use and bring new functionalities.</p>
   <p>Added functionalities compared to the <code class="language-javascript">Backbone.Router</code> are:</p>
 
   <ul>
@@ -8,7 +7,7 @@
     <li>Multiple controllers for a same route</li>
     <li>Aliasing between routes</li>
     <li>Before and After triggers distributed using an event aggregator</li>
-    <li>Simple trigger cache managment</li>
+    <li>Simple trigger cache management</li>
     <li>Secured routes</li>
     <li>Close action (similar to onbeforeunload)</li>
   </ul>

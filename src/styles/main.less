@@ -46,11 +46,16 @@ body #main_content pre {
 */
 
 header {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
   background: rgba(0, 0, 0, 0.1);
   width: 100%;
   border-bottom: 1px dashed #80bd01;
   padding-top: 20px;
   margin: 0 0 40px 0;
+  background: #151515 url("/images/bkg.png") 0 0;
 
   .title-container {
     float: left;
@@ -102,6 +107,40 @@ header {
   }
 }
 
+footer {
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px dashed #80bd01;
+  background: #151515 url("/images/bkg.png") 0 0;
+
+  .container {
+    padding: 5px;
+  }
+
+  .author {
+    float: left;
+  }
+  .license {
+    float: right;
+  }
+}
+
+nav.subnav {
+  position: absolute;
+  top: 180px;
+  left: -250px;
+  width: 250px;
+
+  ul {
+    li::before {
+      margin-right: 0;
+    }
+  }
+}
+
 #downloads .btn {
   display: inline-block;
   text-align: center;
@@ -112,7 +151,10 @@ header {
 */
 
 #main_content {
+  position: relative;
   width: 100%;
+  padding-top: 130px;
+  padding-bottom: 60px;
   -webkit-font-smoothing: antialiased;
 
   h1 {
@@ -270,6 +312,10 @@ hr {
 a {
   color: #63c0f5;
   text-shadow: 0 0 5px rgba(104, 182, 255, 0.5);
+  text-decoration: none;
+}
+a:hover, a:focus {
+  text-decoration: underline;
 }
 
 /* Clearfix */

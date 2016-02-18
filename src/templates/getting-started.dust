@@ -57,7 +57,7 @@ $(function () {~lb}
 // Declare a user profile page
 Backbone.Highway.route('user.profile', {~lb}
   path: '/user/:id',
-  action: function(userId) {~lb}
+  action: function (userId) {~lb}
     // Render user profile page
   {~rb}
 {~rb});</code></pre>
@@ -70,7 +70,7 @@ Backbone.Highway.route('user.profile', {~lb}
 
   <pre class="line-numbers"><code class="language-javascript">
 // Intercept the user click
-$('a.profile').click(function(e) {~lb}
+$('a.profile').click(function (e) {~lb}
   e.preventDefault();
 
   var userId = $(this).attr('data-id');
@@ -83,11 +83,11 @@ $('a.profile').click(function(e) {~lb}
 
   <pre class="line-numbers"><code class="language-javascript">
 // Intercept the user click
-$('a.profile').click(function(e) {~lb}
+$('a.profile').click(function (e) {~lb}
   e.preventDefault();
 
   // Redirecting to route using the path defined in the href attribute
-  Backbone.Highway.go({~lb} path: this.href {~rb});
+  Backbone.Highway.go({~lb} path: $(e.currentTarget).attr('href') {~rb});
 {~rb});</code></pre>
 
   <h2>
@@ -147,8 +147,8 @@ Backbone.Highway.route('home', {~lb}
 Backbone.Highway.route('home', {~lb}
   path: '/',
   before: [
-    {~lb} name: "core", cache: true {~rb},
-    {~lb} name: "module", args: ['foo', 'bar'] {~rb},
+    {~lb} name: 'core', cache: true {~rb},
+    {~lb} name: 'module', args: ['foo', 'bar'] {~rb},
     'submodule'
   ],
   action: function () {~lb}{~rb}
@@ -165,15 +165,15 @@ Backbone.Highway.route('home', {~lb}
   In the same way a route can be named 403 to catch accessing restricted routes.</p>
 
   <pre class="line-numbers"><code class="language-javascript">
-Backbone.Highway.route("404", {~lb}
-  "action": function(path) {~lb}
+Backbone.Highway.route('404', {~lb}
+  action: function (path) {~lb}
     // Couldn't find what you're looking for =/
   {~rb}
 {~rb});
 
 // 403 controller
-Backbone.Highway.route("403", {~lb}
-  "action": function(path) {~lb}
+Backbone.Highway.route('403', {~lb}
+  action: function (path) {~lb}
     // Sorry you can't access this content =(
   {~rb}
 {~rb});</code></pre>
@@ -189,10 +189,10 @@ Backbone.Highway.route("403", {~lb}
   <p>Each route can receive an <code class="language-javascript">authed</code> boolean parameter to declare if the route should be interpreted when the user is logged in or not.</p>
 
   <pre class="line-numbers"><code class="language-javascript">
-Backbone.Highway.route("admin.users", {~lb}
-  path: "/admin/users",
+Backbone.Highway.route('admin.users', {~lb}
+  path: '/admin/users',
   authed: true,
-  action: function() {~lb}
+  action: function () {~lb}
     // Display list of users
   {~rb}
 {~rb});
@@ -207,12 +207,12 @@ Backbone.Highway.route("admin.users", {~lb}
   <pre class="line-numbers"><code class="language-markup">
 &lt;script type="text/javascript" src="backbone.highway.js"&gt;&lt;/script&gt;
 &lt;script type="text/javascript"&gt;
-window.logged_in = &lt;?php if ($_SESSION['logged_in']): ?&gt;true&lt;?php else: ?&gt;false&lt;?php endif; ?&gt;;
+window.LOGGED_IN = &lt;?php if ($_SESSION['LOGGED_IN']): ?&gt;true&lt;?php else: ?&gt;false&lt;?php endif; ?&gt;;
 
-$(funtion() {~lb}
+$(funtion () {~lb}
   // Starting the router telling it if the user is logged in or not
   Backbone.Highway.start({~lb}
-    authed: window.logged_in
+    authed: window.LOGGED_IN
   {~rb});
 {~rb});
 &lt;/script&gt;

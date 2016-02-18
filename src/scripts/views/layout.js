@@ -8,7 +8,8 @@ define([
 
     regions: {
       header: '[data-ui=header]',
-      content: '[data-ui=content]'
+      content: '[data-ui=content]',
+      footer: '[data-ui=footer]'
     }
   });
 });

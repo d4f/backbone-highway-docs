@@ -1,2 +1,3 @@
 <header data-ui="header" class="clearfix"></header>
 <div data-ui="content" class="container"></div>
+<footer data-ui="footer"></footer>
