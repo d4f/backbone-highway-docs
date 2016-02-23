@@ -16,7 +16,7 @@ define([
   });
 
   highway.route('api', {
-    path: '/api',
+    path: '/api(/:method)',
     action: coreController.api
   });
 

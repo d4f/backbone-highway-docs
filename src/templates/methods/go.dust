@@ -1,0 +1,75 @@
+<h3>Backbone.Highway.go( name [, args [, options ]] );</h3>
+
+<p>
+  Navigates the user to the given route using the route name or path
+</p>
+
+<h4>Arguments:</h4>
+<ul>
+  <li>
+    <b>name (Mixed):</b> The name of the route or an object describing the route
+  </li>
+  <li>
+    <b>args (Array):</b> List of parameters to be injected into the route path
+  </li>
+  <li>
+    <b>options (Object):</b> Route execution options
+  </li>
+</ul>
+
+<p>
+  The <code class="language-javascript">name</code> argument can either be the route name
+  as declared with the <code class="language-javascript">route</code> method or
+  an object describing the route
+</p>
+<p>
+  The <code class="language-javascript">args</code> array will be mapped onto
+  each dynamic argument declared in the route path.
+</p>
+<p>
+  The last argument, <code class="language-javascript">options</code>, is passed to the
+  <code class="language-javascript">Backbone.Router</code> to change the behavior of the executed route
+  as described in the <a href="#">Backbone documentation</a>.
+</p>
+
+<h4>Example of navigating with a route name or path:</h4>
+<pre class="line-numbers"><code class="language-javascript">
+// Declare a route
+Backbone.Highway.route('user.edit', {~lb}
+  path: '/user/:id/edit',
+  action: function (userId) {~lb}
+    // Render user edit page
+  {~rb}
+{~rb});
+
+// ...
+
+// Navigate to the route using the name
+Backbone.Highway.go('user.edit', [42]);
+
+// Other way of navigating using the name
+Backbone.Highway.go({~lb}
+  name: 'user.edit',
+  args: [42]
+{~rb});
+
+// Navigate to the route using the path
+Backbone.Highway.go({~lb}
+  path: '/user/42/edit'
+{~rb});</code></pre>
+
+<h4>Default options passed to Backbone.Router:</h4>
+<pre class="line-numbers"><code class="language-javascript">
+{~lb}
+  // Execute the route controller
+  trigger: true,
+  // Replace the current history entry if set to true
+  replace: false
+{~rb}</code></pre>
+
+<h4>Example using the options object</h4>
+<pre class="line-numbers"><code class="language-javascript">
+Backbone.Highway.go('user.edit', [42], {~lb}
+  // Replace the current history entry
+  replace: true
+{~rb});</code></pre>

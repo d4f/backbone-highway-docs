@@ -9,8 +9,10 @@ module.exports = {
       server: {
         baseDir: [
           '<%= config.src %>',
+          '<%= config.src %>/build',
+
           '!<%= config.src %>/styles/**/*.less',
-          '<%= config.src %>/build'
+          '!<%= config.src %>/templates/**/*.dust'
         ]
       },
       middleware: [require('connect-logger')(), historyApiFallback()]
@@ -18,8 +20,10 @@ module.exports = {
     bsFiles: {
       src: [
         '<%= config.src %>',
+        '<%= config.src %>/build',
+
         '!<%= config.src %>/styles/**/*.less',
-        '<%= config.src %>/build'
+        '!<%= config.src %>/templates/**/*.dust'
       ]
     }
   }

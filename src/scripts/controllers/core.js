@@ -19,19 +19,23 @@ define([
 ) {
   'use strict';
 
+  var mainLayout;
+
   function displayLayout () {
-    var layout = new LayoutView({
-      el: '[data-ui=main]'
-    });
-    layout.render();
+    if (!mainLayout) {
+      mainLayout = new LayoutView({
+        el: '[data-ui=main]'
+      });
+      mainLayout.render();
 
-    var headerView = new HeaderView();
-    layout.header.show(headerView);
+      var headerView = new HeaderView();
+      mainLayout.header.show(headerView);
 
-    var footerView = new FooterView();
-    layout.footer.show(footerView);
+      var footerView = new FooterView();
+      mainLayout.footer.show(footerView);
+    }
 
-    return layout;
+    return mainLayout;
   }
 
   var CoreController = Marionette.Controller.extend({
@@ -45,9 +49,13 @@ define([
       layout.content.show(new GettingStartedView());
     },
 
-    api: function () {
+    api: function (method) {
       var layout = displayLayout();
-      layout.content.show(new ApiView());
+      layout.content.show(
+        new ApiView({
+          method: method
+        })
+      );
     },
 
     notFound: function () {

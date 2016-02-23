@@ -1,0 +1,35 @@
+<h3>
+  Backbone.Highway.map( method );
+  <span class="aliases">Aliases: define, declare</span>
+</h3>
+
+<p>
+  Takes a function as its only argument which will be executed in
+  <code class="language-javascript">Backbone.Highway</code>'s context
+  to simplify access to the API.
+</p>
+
+<h4>Arguments:</h4>
+<ul>
+  <li>
+    <b>method (Function):</b> Method executed in the router context
+  </li>
+</ul>
+
+<h4>Example:</h4>
+<pre class="line-numbers"><code class="language-javascript">
+Backbone.Highway.map(function () {~lb}
+  this.route('home', {~lb}
+    path: '/',
+    action: function () {~lb}
+      // Render home page
+    {~rb}
+  {~rb});
+
+  this.route('user.edit', {~lb}
+    path: '/user/:id/edit',
+    action: function (userId) {~lb}
+      // Render user edit page
+    {~rb}
+  {~rb});
+{~rb});</code></pre>

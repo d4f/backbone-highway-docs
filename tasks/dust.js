@@ -1,13 +1,12 @@
 module.exports = {
   dev: {
-    files: [{
-      src: 'src/templates/**/*.dust',
-      dest: 'src/build/scripts/views.js'
-    }],
+    files: {
+      'src/build/scripts/views.js': 'src/templates/**/*.dust'
+    },
     options: {
       runtime: false,
-      basePath: 'src',
-      useBaseName: true,
+      basePath: 'src/templates',
+      // useBaseName: true,
       whitespace: true,
       wrapper: 'amd',
       wrapperOptions: {

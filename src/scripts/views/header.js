@@ -8,7 +8,7 @@ define([
 
   return Marionette.LayoutView.extend({
     template: 'header',
-    className: 'container',
+    className: 'container clearfix',
 
     regions: {
       nav: '[data-ui=nav]'

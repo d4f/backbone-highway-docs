@@ -1,0 +1,72 @@
+<h3>Backbone.Highway.route( name, def );</h3>
+
+<h4>Arguments:</h4>
+<ul>
+  <li>
+    <b>name (String):</b> The unique name of the route
+  </li>
+  <li>
+    <b>def (Object):</b> Definition of the route
+  </li>
+</ul>
+
+<p>
+  Declare a route to the <code class="language-javascript">Backbone.Highway</code> router.
+</p>
+<p>
+  A route consists of a unique name and a definition object.
+  The definition will declare, among other things, the path to which the route will respond, the controller method which
+  will be executed, events which will be triggered (if using a global event aggregator).
+</p>
+<p>
+  In the route definition object, the <code class="language-javascript">path</code>
+  and <code class="language-javascript">action</code> keys are mandatory for the route to work.
+</p>
+<p>
+  The <code class="language-javascript">before</code> and
+  <code class="language-javascript">after</code> parameters will only work if an event aggregator
+  (such as <code class="language-javascript">Backbone.Events</code> or <code class="language-javascript">Backbone.Wreqr</code>)
+  is passed to the router <code class="language-javascript">start</code>
+  via the <code class="language-javascript">dispatcher</code> option.
+</p>
+
+<h4>A very complete example:</h4>
+
+<pre class="line-numbers"><code class="language-javascript">
+// Definition object for a route named 'user.edit'
+Backbone.Highway.route('user.edit', {~lb}
+  // Path with an 'id' parameter
+  path: '/user/:id/edit',
+
+  // Route will only be executed if the user is logged in
+  authenticated: true,
+
+  // Execute triggers before the 'action' controller
+  before: [
+    {~lb} name: 'core.display', cache: true {~rb},
+    'users:display'
+  ],
+
+  // Main controller for the route
+  action: function (userId) {~lb}
+    // Render a user edit form
+  {~rb},
+
+  // Execute triggers after the 'action' controller
+  after: [
+    'core.postTriggers'
+  ],
+
+  // Executed when user is routed away from this route
+  // similar to an 'onbeforeunload' event
+  close: function () {~lb}
+    // Return false to cancel the routing
+    return confirm('Are you sure you want to leave this page?');
+  {~rb}
+{~rb});</code></pre>
+
+<h4>Calling this route:</h4>
+
+<pre class="line-numbers"><code class="language-javascript">
+// Routing to path with path /user/42/edit
+Backbone.Highway.go('user.edit', [42]);</code></pre>

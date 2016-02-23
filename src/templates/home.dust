@@ -18,4 +18,17 @@
   <p>
     Or you can jump right in to the <a href="/api" data-route="api">API documentation</a> for more precise information.
   </p>
+  <h4>Note:</h4>
+  <p>
+    This documentation is a draft. A lot remains to be done, but at least it does not contain less information than what
+    was documented before. If you feel that I have missed something essential that was documented before, you can still access
+    the old readme here: <a href="">Old readme</a>. Any feedback is welcome.
+  </p>
+  <p>
+    Cheers,
+  </p>
+  <p>
+    <a href="mailto:rascarlito@gmail.com">@rascarlito</a>
+  </p>
+
 </section>

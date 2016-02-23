@@ -6,8 +6,12 @@ define([
   'use strict';
 
   // Override marionette renderer to use dust.js templates
-  Marionette.Renderer.render = function (template, data) {
+  Marionette.Renderer.render = function (template, data, ctx) {
     var html = '';
+
+    if (_.isFunction(template)) {
+      template = template.call(ctx, data);
+    }
 
     dust.render(template, data, function (err, out) {
       if (err) {

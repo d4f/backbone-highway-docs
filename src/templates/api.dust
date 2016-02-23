@@ -8,34 +8,54 @@
       </div>
       <ul>
         <li>
-          <a href="#"><span>clearCache</span></a>
+          <a href="/api/clearCache" data-route="api" data-args="clearCache">
+            <span>clearCache</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>declare</span></a>
+          <a href="/api/map" data-route="api" data-args="map">
+            <span>declare</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>define</span></a>
+          <a href="/api/map" data-route="api" data-args="map">
+            <span>define</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>go</span></a>
+          <a href="/api/go" data-route="api" data-args="go">
+            <span>go</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>map</span></a>
+          <a href="/api/map" data-route="api" data-args="map">
+            <span>map</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>off</span></a>
+          <a href="/api/backbone-methods" data-route="api" data-args="backbone-methods">
+            <span>off</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>on</span></a>
+          <a href="/api/backbone-methods" data-route="api" data-args="backbone-methods">
+            <span>on</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>route</span></a>
+          <a href="/api/route" data-route="api" data-args="route">
+            <span>route</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>start</span></a>
+          <a href="/api/start" data-route="api" data-args="start">
+            <span>start</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>trigger</span></a>
+          <a href="/api/backbone-methods" data-route="api" data-args="backbone-methods">
+            <span>trigger</span>
+          </a>
         </li>
       </ul>
     </div>
@@ -46,78 +66,138 @@
       </div>
       <ul>
         <li>
-          <a href="#"><span>_applyStoredRoute</span></a>
+          <a href="/api/_applyStoredRoute" data-route="api" data-args="_applyStoredRoute">
+            <span>_applyStoredRoute</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>_cacheTrigger</span></a>
+          <a href="/api/_cacheTrigger" data-route="api" data-args="_cacheTrigger">
+            <span>_cacheTrigger</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>_checkPath</span></a>
+          <a href="/api/_checkPath" data-route="api" data-args="_checkPath">
+            <span>_checkPath</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>_clearStore</span></a>
+          <a href="/api/_clearStore" data-route="api" data-args="_clearStore">
+            <span>_clearStore</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>_exists</span></a>
+          <a href="/api/_exists" data-route="api" data-args="_exists">
+            <span>_exists</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>_extractParameters</span></a>
+          <a href="/api/_extractParameters" data-route="api" data-args="_extractParameters">
+            <span>_extractParameters</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>_findCachedTrigger</span></a>
+          <a href="/api/_findCachedTrigger" data-route="api" data-args="_findCachedTrigger">
+            <span>_findCachedTrigger</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>_getStoreKey</span></a>
+          <a href="/api/_getStoredRoute" data-route="api" data-args="_getStoredRoute">
+            <span>_getStoredRoute</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>_getStoredRoute</span></a>
+          <a href="/api/_getStoreKey" data-route="api" data-args="_getStoreKey">
+            <span>_getStoreKey</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>_hasDispatcher</span></a>
+          <a href="/api/_hasDispatcher" data-route="api" data-args="_hasDispatcher">
+            <span>_hasDispatcher</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>_httpError</span></a>
+          <a href="/api/_httpError" data-route="api" data-args="_httpError">
+            <span>_httpError</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>_isValidArgsArray</span></a>
+          <a href="/api/_isValidArgsArray" data-route="api" data-args="_isValidArgsArray">
+            <span>_isValidArgsArray</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>_name</span></a>
+          <a href="/api/_name" data-route="api" data-args="_name">
+            <span>_name</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>_parse</span></a>
+          <a href="/api/_parse" data-route="api" data-args="_parse">
+            <span>_parse</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>_path</span></a>
+          <a href="/api/_path" data-route="api" data-args="_path">
+            <span>_path</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>_processControllers</span></a>
+          <a href="/api/_processControllers" data-route="api" data-args="_processControllers">
+            <span>_processControllers</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>_processTriggers</span></a>
+          <a href="/api/_processTrigger" data-route="api" data-args="_processTrigger">
+            <span>_processTrigger</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>_processTrigger</span></a>
+          <a href="/api/_processTriggers" data-route="api" data-args="_processTriggers">
+            <span>_processTriggers</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>_replaceArg</span></a>
+          <a href="/api/_replaceArg" data-route="api" data-args="_replaceArg">
+            <span>_replaceArg</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>_routeToRegExp</span></a>
+          <a href="/api/_routeToRegExp" data-route="api" data-args="_routeToRegExp">
+            <span>_routeToRegExp</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>_sanitizeArgs</span></a>
+          <a href="/api/_sanitizeArgs" data-route="api" data-args="_sanitizeArgs">
+            <span>_sanitizeArgs</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>_startHistory</span></a>
+          <a href="/api/_startHistory" data-route="api" data-args="_startHistory">
+            <span>_startHistory</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>_stripHeadingSlash</span></a>
+          <a href="/api/_storeCurrentRoute" data-route="api" data-args="_storeCurrentRoute">
+            <span>_storeCurrentRoute</span>
+          </a>
         </li>
         <li>
-          <a href="#"><span>_storeCurrentRoute</span></a>
+          <a href="/api/_stripHeadingSlash" data-route="api" data-args="_stripHeadingSlash">
+            <span>_stripHeadingSlash</span>
+          </a>
         </li>
       </ul>
     </div>
   </nav>
+
+  <div data-ui="api-content">
+    <h3>Welcome to the API documentation</h3>
+    <p>
+      Here you will learn about <code class="language-javascript">Backbone.Highway</code>'s intricacies. All the information you always dreamed about can be found.
+      If you can't find the information you're looking for, don't worry, just open an issue on the <a href="https://github.com/d4f/backbone-highway">github page</a>
+      or send me an email at <a href="mailto:rascarlito@gmail.com">rascarlito@gmail.com</a>
+    </p>
+    <p>
+      Most importantly, have fun!
+    </p>
+  </div>
 </section>

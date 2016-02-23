@@ -53,12 +53,19 @@ header {
   background: rgba(0, 0, 0, 0.1);
   width: 100%;
   border-bottom: 1px dashed #80bd01;
-  padding-top: 20px;
   margin: 0 0 40px 0;
   background: #151515 url("/images/bkg.png") 0 0;
 
+  .container {
+    padding: 20px 0;
+  }
+
   .title-container {
     float: left;
+
+    .home-link {
+      display: block;
+    }
 
     .title-inner {
       float: left;
@@ -84,6 +91,7 @@ header {
     font-size: 18px;
     font-weight: 300;
     color: #666;
+    margin: 0;
   }
 
   img {
@@ -172,6 +180,11 @@ nav.subnav {
 
   h3 {
     font-size: 18px;
+
+    .aliases {
+      color: #aaa;
+      font-size: 0.8em;
+    }
   }
 
   h4 {

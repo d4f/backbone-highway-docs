@@ -1,0 +1,5 @@
+<h3>Backbone.Highway.clearCache();</h3>
+
+<p>
+  Empty all the triggers that have been cached
+</p>
