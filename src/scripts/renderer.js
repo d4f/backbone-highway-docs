@@ -1,8 +1,6 @@
 define([
-  'marionette',
-  'dust.core',
-  'compiled-views'
-], function (Marionette, dust) {
+  'marionette'
+], function (Marionette) {
   'use strict';
 
   // Override marionette renderer to use dust.js templates

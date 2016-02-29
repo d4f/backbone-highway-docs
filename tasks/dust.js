@@ -6,15 +6,16 @@ module.exports = {
     options: {
       runtime: false,
       basePath: 'src',
-      // useBaseName: true,
       whitespace: true,
-      wrapper: 'amd',
-      wrapperOptions: {
-        packageName: null,
-        deps: {
-          dust: 'dust.core'
-        }
-      }
+      wrapper: false
+      // useBaseName: true,
+      // wrapper: 'amd',
+      // wrapperOptions: {
+      //   packageName: null,
+      //   deps: {
+      //     dust: 'dust.core'
+      //   }
+      // }
     }
   }
 };

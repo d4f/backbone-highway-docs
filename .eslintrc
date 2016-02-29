@@ -23,6 +23,7 @@
     "$": true,
     "jQuery": true,
     "module": true,
+    "dust": true,
     "_": true
   },
 

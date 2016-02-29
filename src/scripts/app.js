@@ -26,7 +26,7 @@ define([
 
   $(function () {
     highway.start({
-      debug: true
+      root: '/backbone-highway'
     });
   });
 });

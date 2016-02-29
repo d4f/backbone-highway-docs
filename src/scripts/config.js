@@ -1,6 +1,3 @@
-// Make dust.js requirable
-define.amd.dust = true;
-
 // RequireJS configuration
 require.config({
   paths: {
@@ -13,9 +10,7 @@ require.config({
     text: '../bower_components/requirejs-plugins/lib/text',
     json: '../bower_components/requirejs-plugins/src/json',
     loglevel: '../bower_components/loglevel/dist/loglevel',
-    bluebird: '../bower_components/bluebird/js/browser/bluebird',
-    'dust.core': '../bower_components/dustjs-linkedin/dist/dust-core',
-    'compiled-views': '../build/scripts/views'
+    bluebird: '../bower_components/bluebird/js/browser/bluebird'
   },
 
   shim: {

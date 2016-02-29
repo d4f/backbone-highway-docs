@@ -11,6 +11,10 @@ module.exports = {
     src: '<%= config.css %>/**',
     dest: '<%= config.dist %>/'
   },
+  views: {
+    src: '<%= config.src %>/build/scripts/views.js',
+    dest: '<%= config.dist %>/scripts/views.js'
+  },
   vendor: {
     expand: true,
     cwd: '<%= config.src %>',
@@ -32,5 +36,11 @@ module.exports = {
   favicon: {
     src: '<%= config.src %>/favicon.ico',
     dest: '<%= config.dist %>/favicon.ico'
+  },
+  annotatedSource: {
+    expand: true,
+    cwd: '<%= config.src %>',
+    src: 'docs/**',
+    dest: '<%= config.dist %>/'
   }
 };
