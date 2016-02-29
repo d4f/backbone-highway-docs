@@ -1,1 +1,32 @@
-<h3>Backbone.Highway._path()</h3>
+<h3>Backbone.Highway._path( name );</h3>
+
+<p>
+  Retrieve the path of a route by it's name.<br>
+  Returns the raw route path or false if the route doesn't exist.
+</p>
+
+<h4>Arguments:</h4>
+<ul>
+  <li>
+    <b>name (String):</b> The route name
+  </li>
+</ul>
+
+<h4>Arguments:</h4>
+<ul>
+  <li>
+    <b>name (String):</b> The route name
+  </li>
+</ul>
+
+<h4>Example:</h4>
+<pre class="line-numbers"><code class="language-javascript">
+Backbone.Highway.route('user.edit', {~lb}
+  path: '/users/:id/edit',
+  action: {~lb}
+    // ...
+  {~rb}
+{~rb});
+
+Backbone.Highway._path('user.edit');
+// >> '/users/:id/edit'</code></pre>

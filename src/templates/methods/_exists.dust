@@ -1,1 +1,29 @@
-<h3>Backbone.Highway._exists()</h3>
+<h3>Backbone.Highway._exists( params );</h3>
+
+<p>
+  Check if a route exists by its name or its path. If anything else than an object is passed it will return <code>false</code>
+</p>
+
+<h4>Arguments:</h4>
+<ul>
+  <li>
+    <b>params (Object):</b> Object containing with a <i>name</i> or <i>path</i> key
+  </li>
+</ul>
+
+<pre class="line-numbers"><code class="language-javascript">
+Backbone.Highway.route('home', {~lb}
+  path: '/',
+  action: function () {~lb}
+    // ...
+  {~rb}
+{~rb});
+
+Backbone.Highway._exists({~lb} name: 'home' {~rb});
+// >> true
+
+Backbone.Highway._exists({~lb} path: '/' {~rb});
+// >> true
+
+Backbone.Highway._exists({~lb} name: 'some-inexisting-name' {~rb});
+// >> false</code></pre>

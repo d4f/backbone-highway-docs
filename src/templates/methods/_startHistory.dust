@@ -1,1 +1,6 @@
-<h3>Backbone.Highway._startHistory()</h3>
+<h3>Backbone.Highway._startHistory();</h3>
+
+<p>
+  Start Backbone.History if it hasn't been done yet.<br>
+  Will trigger a client-side 404 if the loading route doesn't exist.
+</p>

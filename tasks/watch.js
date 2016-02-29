@@ -19,5 +19,9 @@ module.exports = {
       '<%= config.src %>/styles/**/*.less'
     ],
     tasks: ['less']
+  },
+  dist: {
+    files: ['<%= config.dist/**'],
+    tasks: []
   }
 };

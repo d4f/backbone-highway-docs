@@ -1,1 +1,26 @@
-<h3>Backbone.Highway._extractParameters()</h3>
+<h3>Backbone.Highway._extractParameters( name, path );</h3>
+
+<p>
+  Extract parameters from the path of a route. Build on top of <code>Backbone.Router.prototype._extractParameters()</code>.
+</p>
+
+<h4>Arguments:</h4>
+<ul>
+  <li>
+    <b>name (String):</b> The name of the route
+  </li>
+  <li>
+    <b>path (String):</b> The path from which the parameters should be extracted
+  </li>
+</ul>
+
+<pre class="line-numbers"><code class="language-javascript">
+Backbone.Highway.route('user.edit', {~lb}
+  path: '/users/:id',
+  action: function (userId) {~lb}
+    // ...
+  {~rb}
+{~rb});
+
+Backbone.Highway._extractParameters('user.edit', '/users/42');
+// >> ['42']</code></pre>

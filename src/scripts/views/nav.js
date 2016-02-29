@@ -6,7 +6,7 @@ define([
   'use strict';
 
   return Marionette.ItemView.extend({
-    template: 'nav',
+    template: 'templates/nav',
     tagName: 'nav',
 
     behaviors: {

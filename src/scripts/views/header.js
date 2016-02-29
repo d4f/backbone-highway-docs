@@ -7,7 +7,7 @@ define([
   'use strict';
 
   return Marionette.LayoutView.extend({
-    template: 'header',
+    template: 'templates/header',
     className: 'container clearfix',
 
     regions: {

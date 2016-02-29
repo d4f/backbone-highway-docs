@@ -1,1 +1,15 @@
-<h3>Backbone.Highway._replaceArg()</h3>
+<h3>Backbone.Highway._replaceArg( path, arg );</h3>
+
+<p>
+  Replace a named/splat parameter in a path
+</p>
+
+<h4>Arguments:</h4>
+<ul>
+  <li>
+    <b>path (String):</b> The path that needs a parameter to be replaced
+  </li>
+  <li>
+    <b>arg (Mixed):</b> The data to inject in the path
+  </li>
+</ul>

@@ -1,1 +1,23 @@
-<h3>Backbone.Highway._httpError()</h3>
+<h3>Backbone.Highway._httpError( code );</h3>
+
+<p>
+  Trigger an error controller if it was defined using the <code>Backbone.Highway.route()</code> method.
+</p>
+
+<h4>Arguments:</h4>
+<ul>
+  <li>
+    <b>code (String/Number):</b> 403 or 404
+  </li>
+</ul>
+
+<pre class="line-numbers"><code class="language-javascript">
+// Define a client-side 404 controller
+Backbone.Highway.route('404', {~lb}
+  action: function () {~lb}
+    // Display error message
+  {~rb}
+{~rb})
+
+// Execute 404 controller
+Backbone.Highway._httpError(404);</code></pre>

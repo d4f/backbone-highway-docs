@@ -1,5 +1,9 @@
 <h3>Backbone.Highway.start( [ options ] );</h3>
 
+<p>
+  Starts the router after having declared routes using the <code class="language-javascript">Backbone.Highway.route</code> method.
+</p>
+
 <h4>Arguments:</h4>
 <ul>
   <li>
@@ -8,8 +12,7 @@
 </ul>
 
 <p>
-  Starts the router after having declared routes using the <code class="language-javascript">Backbone.Highway.route</code> method.
-  It should be called after all the routes have been declared as they will fire immediatelly (if a route matches the current URL).
+  This method should be called after all the routes have been declared as they will fire immediatelly (if a route matches the current URL).
 </p>
 <p>
   Routes can be declared after <code class="language-javascript">Backbone.Highway</code> has been started, but those routes

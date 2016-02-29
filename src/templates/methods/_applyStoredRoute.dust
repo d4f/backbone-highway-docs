@@ -1,1 +1,5 @@
-<h3>Backbone.Highway._applyStoredRoute()</h3>
+<h3>Backbone.Highway._applyStoredRoute();</h3>
+
+<p>
+  Reload the route that was stored before redirecting to login controller
+</p>

@@ -1,1 +1,24 @@
-<h3>Backbone.Highway._parse()</h3>
+<h3>Backbone.Highway._parse( path [, args ] );</h3>
+
+<p>
+  Parse a path to inject a list of arguments into the path.
+</p>
+
+<h4>Arguments:</h4>
+<ul>
+  <li>
+    <b>path (String):</b> The path to be parsed
+  </li>
+  <li>
+    <b>args (Array):</b> Optional arguments to inject into the path
+  </li>
+</ul>
+
+<h4>Example:</h4>
+<pre class="line-numbers"><code class="language-javascript">
+Backbone.Highway._parse('/users/:id/edit', [42]);
+// >> '/users/42/edit'
+
+Backbone.Highway._parse('/users(/:id)');
+// >> '/users'
+</code></pre>

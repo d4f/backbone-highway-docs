@@ -1,1 +1,15 @@
-<h3>Backbone.Highway._processTriggers()</h3>
+<h3>Backbone.Highway._processTriggers( triggers, routeArgs );</h3>
+
+<p>
+  Process a list of triggers.
+</p>
+
+<h4>Arguments:</h4>
+<ul>
+  <li>
+    <b>triggers (Array):</b> List of Strings or Objects describing the triggers
+  </li>
+  <li>
+    <b>routeArgs (Array):</b> Route arguments
+  </li>
+</ul>

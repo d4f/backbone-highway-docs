@@ -1,1 +1,15 @@
-<h3>Backbone.Highway._processTrigger()</h3>
+<h3>Backbone.Highway._processTrigger( trigger, routeArgs );</h3>
+
+<p>
+  Process a single trigger.
+</p>
+
+<h4>Arguments:</h4>
+<ul>
+  <li>
+    <b>trigger (Mixed):</b> String or Object describing the trigger
+  </li>
+  <li>
+    <b>routeArgs (Array):</b> Route arguments
+  </li>
+</ul>

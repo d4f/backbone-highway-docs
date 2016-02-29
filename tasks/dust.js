@@ -5,7 +5,7 @@ module.exports = {
     },
     options: {
       runtime: false,
-      basePath: 'src/templates',
+      basePath: 'src',
       // useBaseName: true,
       whitespace: true,
       wrapper: 'amd',

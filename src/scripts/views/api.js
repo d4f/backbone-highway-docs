@@ -7,7 +7,7 @@ define([
   'use strict';
 
   return Marionette.LayoutView.extend({
-    template: 'api',
+    template: 'templates/api',
 
     regions: {
       content: '[data-ui=api-content]'

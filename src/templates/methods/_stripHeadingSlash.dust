@@ -1,1 +1,9 @@
-<h3>Backbone.Highway._stripHeadingSlash()</h3>
+<h3>Backbone.Highway._stripHeadingSlash( path );</h3>
+
+<p>
+  Remove heading slash or pound sign from a path, if any.
+</p>
+
+<pre class="line-numbers"><code class="language-javascript">
+Backbone.Highway._stripHeadingSlash('/user/:id/edit');
+// >> user/:id/edit</code></pre>

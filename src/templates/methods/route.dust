@@ -1,5 +1,9 @@
 <h3>Backbone.Highway.route( name, def );</h3>
 
+<p>
+  Declare a route to the <code class="language-javascript">Backbone.Highway</code> router.
+</p>
+
 <h4>Arguments:</h4>
 <ul>
   <li>
@@ -10,9 +14,6 @@
   </li>
 </ul>
 
-<p>
-  Declare a route to the <code class="language-javascript">Backbone.Highway</code> router.
-</p>
 <p>
   A route consists of a unique name and a definition object.
   The definition will declare, among other things, the path to which the route will respond, the controller method which

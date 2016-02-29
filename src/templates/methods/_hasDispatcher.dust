@@ -1,1 +1,14 @@
-<h3>Backbone.Highway._hasDispatcher()</h3>
+<h3>Backbone.Highway._hasDispatcher();</h3>
+
+<p>
+  Determine if a dispatcher (event aggregator) was passed with the options when the router was started.<br>
+  Checks if <code>Backbone.Highway.dispatcher</code> exists and if <code>Backbone.Highway.dispatcher.trigger</code> is a method.
+</p>
+
+<pre class="line-numbers"><code class="language-javascript">
+Backbone.Highway.start({~lb}
+  dispatcher: _.extend({~lb}{~rb}, Backbone.Events);
+{~rb});
+
+Backbone.Highway._hasDispatcher();
+// >> true</code></pre>

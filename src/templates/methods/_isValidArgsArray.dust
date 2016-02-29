@@ -1,1 +1,15 @@
-<h3>Backbone.Highway._isValidArgsArray()</h3>
+<h3>Backbone.Highway._isValidArgsArray( args );</h3>
+
+<p>
+  Check if parameter is a valid arguments array sanitizing it before hand.
+</p>
+
+<h4>Arguments:</h4>
+<ul>
+  <li>
+    <b>args (Array):</b> Arguments array
+  </li>
+</ul>
+
+<pre class="line-numbers"><code class="language-javascript">
+// Write example</code></pre>

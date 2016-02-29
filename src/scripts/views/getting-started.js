@@ -5,7 +5,7 @@ define([
   'use strict';
 
   return Marionette.ItemView.extend({
-    template: 'getting-started',
+    template: 'templates/getting-started',
 
     behaviors: {
       Highlight: {

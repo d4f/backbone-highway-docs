@@ -1,1 +1,15 @@
-<h3>Backbone.Highway._processControllers()</h3>
+<h3>Backbone.Highway._processControllers( def [, isTrigger ] );</h3>
+
+<p>
+  Process a list of controllers.
+</p>
+
+<h4>Arguments:</h4>
+<ul>
+  <li>
+    <b>dev (Object):</b> Definition of the controllers to process
+  </li>
+  <li>
+    <b>isTrigger (Boolean):</b> Is the controller being processed as a trigger
+  </li>
+</ul>

@@ -2,6 +2,18 @@
 
 <h4>Backbone.Highway.on()</h4>
 
+<p>
+  Listen to a router event.
+</p>
+
 <h4>Backbone.Highway.off()</h4>
 
+<p>
+  Stop listening to a router event.
+</p>
+
 <h4>Backbone.Highway.trigger()</h4>
+
+<p>
+  Manually trigger a router event.
+</p>

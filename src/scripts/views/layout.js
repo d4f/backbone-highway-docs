@@ -4,7 +4,7 @@ define([
   'use strict';
 
   return Marionette.LayoutView.extend({
-    template: 'layout',
+    template: 'templates/layout',
 
     regions: {
       header: '[data-ui=header]',

@@ -26,5 +26,23 @@ module.exports = {
         '!<%= config.src %>/templates/**/*.dust'
       ]
     }
+  },
+  dist: {
+    options: {
+      watchTask: true,
+      logLevel: 'info',
+      logConnections: true,
+      server: {
+        baseDir: [
+          '<%= config.dist %>'
+        ]
+      },
+      middleware: [require('connect-logger')(), historyApiFallback()]
+    },
+    bsFiles: {
+      src: [
+        '<%= config.dist %>'
+      ]
+    }
   }
 };

@@ -5,7 +5,7 @@ define([
   'use strict';
 
   return Marionette.ItemView.extend({
-    template: 'home',
+    template: 'templates/home',
 
     behaviors: {
       Routing: {

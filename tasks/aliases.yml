@@ -1,12 +1,21 @@
 default:
   - serve
-build:
+build:dev:
+  - lint
   - dust
   - less
+build:dist:
+  - clean
+  - build:dev
+  - requirejs
+  - copy
 serve:
-  - build
+  - build:dev
   - browserSync:dev
   - watch
+serve:dist:
+  - build:dist
+  - browserSync:dist
+  - watch:dist
 lint:
-  - jscs
-  - jshint
+  - eslint

@@ -1,1 +1,31 @@
-<h3>Backbone.Highway._findCachedTrigger()</h3>
+<h3>Backbone.Highway._findCachedTrigger( trigger );</h3>
+
+<p>
+  Find a cached trigger.<br>
+  If it does not exist it will be created automatically.
+</p>
+
+<h4>Arguments:</h4>
+<ul>
+  <li>
+    <b>trigger (Object):</b> Trigger object definition
+  </li>
+</ul>
+
+<pre class="line-numbers"><code class="language-javascript">
+Backbone.Highway.route('home', {~lb}
+  path: '/',
+  before: [{~lb}
+    name: 'core:render',
+    args: [/* List of arguments */],
+    cache: true
+  {~rb}],
+  action: function () {~lb}
+    // ...
+  {~rb}
+{~rb});
+
+Backbone.Highway.go('home');
+
+Backbone.Highway._findCachedTrigger({~lb} name: 'core:render' {~rb});
+// >> {~lb} name: 'core:render', args: [ ... ], cache: true {~rb}</code></pre>

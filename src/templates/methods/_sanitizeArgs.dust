@@ -1,1 +1,14 @@
-<h3>Backbone.Highway._sanitizeArgs()</h3>
+<h3>Backbone.Highway._sanitizeArgs( args );</h3>
+
+<p>
+  Clean arguments array.<br>
+  Removes <code>null</code> and <code>undefined</code> entries from the arguments array.<br>
+  If the <code>args</code> passed is not an <code>Array</code> it will be converted to an array.
+</p>
+
+<h4>Arguments:</h4>
+<ul>
+  <li>
+    <b>args (Mixed):</b> An array of arguments to clean or a value that will be converted to an array
+  </li>
+</ul>

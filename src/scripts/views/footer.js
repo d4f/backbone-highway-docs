@@ -4,7 +4,7 @@ define([
   'use strict';
 
   return Marionette.ItemView.extend({
-    template: 'footer',
+    template: 'templates/footer',
     className: 'container clearfix'
   });
 });

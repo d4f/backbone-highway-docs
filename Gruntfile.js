@@ -8,7 +8,11 @@ module.exports = function (grunt) {
   var configPath = {
     tmp: '.tmp',
     dist: 'dist',
-    src: 'src'
+    src: 'src',
+    js: 'scripts',
+    css: 'styles',
+    img: 'images',
+    build: 'build'
   };
 
   var config = {

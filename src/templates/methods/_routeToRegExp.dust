@@ -1,1 +1,13 @@
-<h3>Backbone.Highway._routeToRegExp()</h3>
+<h3>Backbone.Highway._routeToRegExp( path );</h3>
+
+<p>
+  Transform a route path to a regular expression.<br>
+  Uses the <code>Backbone.Router.prototype._routeToRegExp</code> internally.
+</p>
+
+<h4>Arguments:</h4>
+<ul>
+  <li>
+    <b>path (String):</b> The route path
+  </li>
+</ul>

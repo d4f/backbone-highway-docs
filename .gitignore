@@ -25,6 +25,7 @@ build/Release
 
 # Compiled/Generated JavaScript
 src/build
+dist
 
 # Annotated source
 src/docs

@@ -1,1 +1,9 @@
-<h3>Backbone.Highway._getStoreKey()</h3>
+<h3>Backbone.Highway._getStoreKey( key );</h3>
+
+<p>
+  Generate a complete store key using the prefix in the options.
+</p>
+
+<pre class="line-numbers"><code class="language-javascript">
+Backbone.Highway._getStoreKey('path');
+// >> 'backbone-highway:path'</code></pre>

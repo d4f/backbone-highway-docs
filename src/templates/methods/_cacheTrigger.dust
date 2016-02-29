@@ -1,1 +1,12 @@
-<h3>Backbone.Highway._cacheTrigger()</h3>
+<h3>Backbone.Highway._cacheTrigger( trigger );</h3>
+
+<p>
+  Set a triggers cache state
+</p>
+
+<h4>Arguments:</h4>
+<ul>
+  <li>
+    <b>trigger (Object):</b> Trigger object definition
+  </li>
+</ul>
