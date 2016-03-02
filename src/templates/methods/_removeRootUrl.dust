@@ -1,0 +1,35 @@
+<h3>Backbone.Highway._removeRootUrl( path );</h3>
+
+<p>
+  Remove pushState root url from path.<br>
+  Used by the <code>go</code> method.
+</p>
+
+<h4>Arguments:</h4>
+<ul>
+  <li>
+    <b>path (String):</b> Path containing the pushState root url
+  </li>
+</ul>
+
+<pre class="line-numbers"><code class="language-javascript">
+Backbone.Highway.route('testing', {~lb}
+  path: '/testing',
+  action: function () {~lb}
+    // ...
+  {~rb}
+{~rb});
+
+Backbone.Highway.start({~lb}
+  root: '/root-url'
+{~rb});
+
+// Go to 'testing' route with root url
+Backbone.Highway.go({~lb} path: '/root-url/testing' {~rb});
+
+// Or without still works the same
+Backbone.Highway.go({~lb} path: '/testing' {~rb});
+
+// Raw usage of the method
+Backbone.Highway._removeRootUrl('/root-url/testing');
+// >> '/testing'</code></pre>
