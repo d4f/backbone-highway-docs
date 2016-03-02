@@ -2,7 +2,10 @@
   <a href="/" data-route="home" class="home-link clearfix">
     <img src="images/backbone-router-logo.png" alt="logo" title="">
     <div class="title-inner">
-      <h1>Backbone.Highway</h1>
+      <h1>
+        Backbone.Highway
+        <span class="version">v0.7.0-rc1</span>
+      </h1>
       <h2>Routing Backbone with style \o/</h2>
     </div>
   </a>
